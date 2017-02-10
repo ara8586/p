@@ -1,9 +1,3 @@
--- کد های پایین در ربات نشان داده نمیشوند
--- http://permag.ir
--- @permag_ir
--- @permag_bots
--- @permag
-
 local string = require("string")
 local base = _G
 local table = require("table")
@@ -240,8 +234,5 @@ end
 
 return Url
 
--- کد های پایین در ربات نشان داده نمیشوند
--- http://permag.ir
--- @permag_ir
--- @permag_bots
--- @permag
+-- by @mr_ahmadix
+-- sp @suport_arabot
