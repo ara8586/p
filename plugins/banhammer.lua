@@ -77,7 +77,7 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't ban_ *mods,owners and bot admins*❌", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید مدیران،صاحبان گروه، و ادمین های ربات رو از گروه محروم کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید مدیران،صاحبان گروه، و ادمین های ربات رو از گروه محروم کنید*❌", 0, "md")
          end
      end
 if administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
@@ -145,7 +145,7 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't silent_ *mods,owners and bot admins*❌", 0, "md")
     else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه، و ادمین های ربات بگیرید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه، و ادمین های ربات بگیرید*❌", 0, "md")
        end
      end
 if administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] then
@@ -216,7 +216,7 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't_ *globally ban* _other admins_❌", 0, "md")
   else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید ادمین های ربات رو از تمامی گروه های ربات محروم کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید ادمین های ربات رو از تمامی گروه های ربات محروم کنید*❌", 0, "md")
         end
      end
 if is_gbanned(data.id_) then
@@ -279,7 +279,7 @@ tdcli_function ({
    if not lang then
   return tdcli.sendMessage(data.chat_id_, "", 0, "❌_You can't kick_ *mods,owners and bot admins*❌", 0, "md")
     elseif lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو اخراج کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "❌*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو اخراج کنید*❌", 0, "md")
    end
   else
      kick_user(data.sender_user_id_, data.chat_id_)
@@ -290,7 +290,7 @@ tdcli_function ({
    if not lang then
   return tdcli.sendMessage(data.chat_id_, "", 0, "❌_You can't delete messages_ *mods,owners and bot admins*❌", 0, "md")
    elseif lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "*شما نمیتوانید پیام های مدیران،صاحبان گروه و ادمین های ربات رو پاک کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "❌*شما نمیتوانید پیام های مدیران،صاحبان گروه و ادمین های ربات رو پاک کنید*❌", 0, "md")
    end
   else
 tdcli.deleteMessagesFromUser(data.chat_id_, data.sender_user_id_, dl_cb, nil)
@@ -303,7 +303,7 @@ tdcli.deleteMessagesFromUser(data.chat_id_, data.sender_user_id_, dl_cb, nil)
   end
 else
     if lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "_کاربر یافت نشد_⚠️", 0⚠️, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "⚠️_کاربر یافت نشد_⚠️", 0⚠️, "md")
    else
   return tdcli.sendMessage(data.chat_id_, "", 0, "⚠️*User Not Found*⚠️", 0, "md")
       end
@@ -326,7 +326,7 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't ban_ *mods,owners and bot admins*❌", 0, "md")
    else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید مدیران،صاحبان گروه، و ادمین های ربات رو از گروه محروم کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید مدیران،صاحبان گروه، و ادمین های ربات رو از گروه محروم کنید*❌", 0, "md")
          end
      end
 if administration[tostring(arg.chat_id)]['banned'][tostring(data.id_)] then
@@ -366,7 +366,7 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't silent_ *mods,owners and bot admins*❌", 0, "md")
     else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه، و ادمین های ربات بگیرید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه، و ادمین های ربات بگیرید*❌", 0, "md")
        end
      end
 if administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] then
@@ -409,7 +409,7 @@ end
   if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't_ *globally ban* _other admins_"❌, 0, "md")
   else
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید ادمین های ربات رو از تمامی گروه های ربات محروم کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید ادمین های ربات رو از تمامی گروه های ربات محروم کنید*❌", 0, "md")
         end
      end
 if is_gbanned(data.id_) then
@@ -453,7 +453,7 @@ end
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't kick_ *mods,owners and bot admins*❌", 0, "md")
     elseif lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو اخراج کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو اخراج کنید*❌", 0, "md")
    end
   else
      kick_user(data.id_, arg.chat_id)
@@ -464,7 +464,7 @@ end
    if not lang then
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't delete messages_ *mods,owners and bot admins*❌", 0, "md")
    elseif lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "*شما نمیتوانید پیام های مدیران،صاحبان گروه و ادمین های ربات رو پاک کنید*❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید پیام های مدیران،صاحبان گروه و ادمین های ربات رو پاک کنید*❌", 0, "md")
    end
   else
 tdcli.deleteMessagesFromUser(arg.chat_id, data.id_, dl_cb, nil)
@@ -477,7 +477,7 @@ tdcli.deleteMessagesFromUser(arg.chat_id, data.id_, dl_cb, nil)
   end
 else
     if lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "_کاربر یافت نشد_❌", 0❌, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌_کاربر یافت نشد_❌", 0, "md")
    else
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌*User Not Found*❌", 0, "md")
       end
@@ -502,7 +502,7 @@ end
    if not lang then
      tdcli.sendMessage(msg.chat_id_, "", 0, "❌_You can't kick mods,owners or bot admins_❌", 0, "md")
    elseif lang then
-     tdcli.sendMessage(msg.chat_id_, "", 0, "*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو اخراج کنید*❌", 0❌, "md")
+     tdcli.sendMessage(msg.chat_id_, "", 0, "❌*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو اخراج کنید*❌", 0, "md")
          end
      else
 kick_user(matches[2], msg.chat_id_)
@@ -528,7 +528,7 @@ end
    if not lang then
    return tdcli.sendMessage(msg.chat_id_, "", 0, "❌_You can't delete messages mods,owners or bot admins_❌", 0, "md")
      elseif lang then
-   return tdcli.sendMessage(msg.chat_id_, "", 0, "*شما نمیتوانید پیام های مدیران،صاحبان گروه و ادمین های ربات رو پاک کنید*❌", 0❌, "md")
+   return tdcli.sendMessage(msg.chat_id_, "", 0, "❌*شما نمیتوانید پیام های مدیران،صاحبان گروه و ادمین های ربات رو پاک کنید*❌", 0, "md")
    end
      else
 tdcli.deleteMessagesFromUser(msg.chat_id_, matches[2], dl_cb, nil)
@@ -559,7 +559,7 @@ end
    if not lang then
     return tdcli.sendMessage(msg.chat_id_, "", 0, "❌_You can't globally ban other admins_❌", 0, "md")
 else
-    return tdcli.sendMessage(msg.chat_id_, "", 0, "*شما نمیتوانید ادمین های ربات رو از گروه های ربات محروم کنید*❌", 0❌, "md")
+    return tdcli.sendMessage(msg.chat_id_, "", 0, "❌*شما نمیتوانید ادمین های ربات رو از گروه های ربات محروم کنید*❌", 0, "md")
         end
      end
    if is_gbanned(matches[2]) then
@@ -629,7 +629,7 @@ end
      if not lang then
     return tdcli.sendMessage(msg.chat_id_, "", 0, "❌_You can't ban mods,owners or bot admins_❌", 0, "md")
     else
-    return tdcli.sendMessage(msg.chat_id_, "", 0, "*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو از گروه محروم کنید*❌", 0❌, "md")
+    return tdcli.sendMessage(msg.chat_id_, "", 0, "❌*شما نمیتوانید مدیران،صاحبان گروه و ادمین های ربات رو از گروه محروم کنید*❌", 0, "md")
         end
      end
    if is_banned(matches[2], msg.chat_id_) then
@@ -699,7 +699,7 @@ end
    if not lang then
    return tdcli.sendMessage(msg.chat_id_, "", 0, "❌_You can't silent mods,leaders or bot admins_❌", 0, "md")
  else
-   return tdcli.sendMessage(msg.chat_id_, "", 0, "*شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه و ادمین های ربات بگیرید*❌", 0❌, "md")
+   return tdcli.sendMessage(msg.chat_id_, "", 0, "❌*شما نمیتوانید توانایی چت کردن رو از مدیران،صاحبان گروه و ادمین های ربات بگیرید*❌", 0, "md")
         end
      end
    if is_silent_user(matches[2], chat) then
