@@ -37,3 +37,5 @@ fi
    ./tg/tgcli -s ./bot/bot.lua $@
 fi
 
+-- sp @mr_ahmadix
+-- sp @suport_arabot
