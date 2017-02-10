@@ -303,7 +303,7 @@ tdcli.deleteMessagesFromUser(data.chat_id_, data.sender_user_id_, dl_cb, nil)
   end
 else
     if lang then
-  return tdcli.sendMessage(data.chat_id_, "", 0, "⚠️_کاربر یافت نشد_⚠️", 0⚠️, "md")
+  return tdcli.sendMessage(data.chat_id_, "", 0, "⚠️_کاربر یافت نشد_⚠️", 0, "md")
    else
   return tdcli.sendMessage(data.chat_id_, "", 0, "⚠️*User Not Found*⚠️", 0, "md")
       end
@@ -373,7 +373,7 @@ if administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] 
     if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "🚷_User_ "..user_name.." *"..data.id_.."* _is already_ *silent*🚷", 0, "md")
   else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "🚷_کاربر_ "..user_name.." *"..data.id_.."* *از قبل توانایی چت کردن رو نداشت*", 0🚷, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "🚷_کاربر_ "..user_name.." *"..data.id_.."* *از قبل توانایی چت کردن رو نداشت*🚷", 0, "md")
      end
    end
 administration[tostring(arg.chat_id)]['is_silent_users'][tostring(data.id_)] = user_name
@@ -407,7 +407,7 @@ end
     end
    if is_admin1(data.id_) then
   if not lang then
-  return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't_ *globally ban* _other admins_"❌, 0, "md")
+  return tdcli.sendMessage(arg.chat_id, "", 0, "❌_You can't_ *globally ban* _other admins_❌", 0, "md")
   else
   return tdcli.sendMessage(arg.chat_id, "", 0, "❌*شما نمیتوانید ادمین های ربات رو از تمامی گروه های ربات محروم کنید*❌", 0, "md")
         end
@@ -437,7 +437,7 @@ if not is_gbanned(data.id_) then
      if not lang then
      return tdcli.sendMessage(arg.chat_id, "", 0, "❕_User_ "..user_name.." *"..data.id_.."* _is not_ *globally banned*❕", 0, "md")
    else
-     return tdcli.sendMessage(arg.chat_id, "", 0, "❕_کاربر_ "..user_name.." *"..data.id_.."* *از گروه های ربات محروم نبود*", 0❕, "md")
+     return tdcli.sendMessage(arg.chat_id, "", 0, "❕_کاربر_ "..user_name.." *"..data.id_.."* *از گروه های ربات محروم نبود*❕", 0, "md")
       end
    end
   administration['gban_users'][tostring(data.id_)] = nil
