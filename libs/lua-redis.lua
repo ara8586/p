@@ -1135,13 +1135,9 @@ redis.commands = {
     }),
 }
 
--- ############################################################################
 
 return redis
 
 
--- کد های پایین در ربات نشان داده نمیشوند
--- http://permag.ir
--- @permag_ir
--- @permag_bots
--- @permag
+-- by @mr_ahmadix
+-- sp @suport_arabot
