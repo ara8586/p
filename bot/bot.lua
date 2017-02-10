@@ -1,7 +1,7 @@
 tdcli = dofile('./tg/tdcli.lua')
 serpent = (loadfile "./libs/serpent.lua")()
 feedparser = (loadfile "./libs/feedparser.lua")()
-our_id = 123456789 -- Put Here Your Bot ID
+our_id = 71377914 -- Put Here Your Bot ID
 URL = require "socket.url"
 http = require "socket.http"
 https = require "ssl.https"
@@ -90,23 +90,17 @@ function create_config( )
 	"lock-fosh"
 	
  },
-    sudo_users = {123456789},
+    sudo_users = {71377914},
     admins = {},
     disabled_channels = {},
     moderation = {data = './data/moderation.json'},
-    info_text = [[》permag.ir v3
-
-🔰Our channel :
-》@permag_bots《
-
-🔰Our channel2 :
-》@permag_ir《
-
-🔰Our channel3 :
-》@permag《
-
-🔰Our website :
-》http://permag.ir
+    info_text = [[➖➖➖➖➖➖➖
+🇮🇷ARA BOT🇮🇷
+👥ارتباط با ما:
+🆔Admin:@mr_ahmadix
+(👇🏻برای افرادی که ریپورت هستند👇🏻)
+🆔Bot Supporter: @suport_arabot
+➖➖➖➖➖➖➖
 ]],
   }
   serialize_to_file(config, './data/config.lua')
@@ -496,7 +490,7 @@ local lang = redis:get(hash)
     local i = 1
   if not data[tostring(chat_id)] then
   if not lang then
-    return '_Group is not added_'
+    return '❌_Group is not added_❌'
 else
     return 'گروه به لیست گروه های مدیریتی ربات اضافه نشده است'
    end
@@ -894,8 +888,6 @@ elseif msg.content_.ID == "MessageGame" then
   end
 
 end
--- کد های پایین در ربات نشان داده نمیشوند
--- http://permag.ir
--- @permag_ir
--- @permag_bots
--- @permag
+
+-- by @mr_ahmadix
+-- sp @suport_arabot
