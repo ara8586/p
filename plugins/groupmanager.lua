@@ -2853,23 +2853,23 @@ end
 if matches[1] == "settings" or matches[1] == "تنظیمات" then
 return group_settings(msg, target)
 end
-if matches[1] == "mutelist" or if matches[1] == "لیست ممنوعیت" then
+if matches[1] == "mutelist" or matches[1] == "لیست ممنوعیت" then
 return mutes(msg, target)
 end
-if matches[1] == "modlist" or if matches[1] == "لیست ناظران" then
+if matches[1] == "modlist" or matches[1] == "لیست ناظران" then
 return modlist(msg)
 end
-if matches[1] == "ownerlist" or if matches[1] == "لیست مدیران" and is_owner(msg) then
+if matches[1] == "ownerlist" or matches[1] == "لیست مدیران" and is_owner(msg) then
 return ownerlist(msg)
 end
 
-if matches[1] == "setlang" or if matches[1] == "تنظیم زبان" and is_owner(msg) then
-   if matches[2] == "en" or if matches[2] == "انگلیسی" then
+if matches[1] == "setlang" or matches[1] == "تنظیم زبان" and is_owner(msg) then
+   if matches[2] == "en" or  matches[2] == "انگلیسی" then
 local hash = "gp_lang:"..msg.chat_id_
 local lang = redis:get(hash)
  redis:del(hash)
 return "_Group Language Set To:_ EN"
-  elseif matches[2] == "fa" or if matches[2] == "فارسی" then
+  elseif matches[2] == "fa" or matches[2] == "فارسی" then
 redis:set(hash, true)
 return "*زبان گروه تنظیم شد به : فارسی*"
 end
@@ -3400,13 +3400,19 @@ patterns ={
 "^[!/#](ممنوع)$",
 "^[!/#](قفل)$",
 "^[!/#](id)$",
+"^(ایدی)$",								
 "^[!/#](id) (.*)$",
 "^[!/#](pin)$",
+"^(پین)$",								
 "^[!/#](unpin)$",
+"^(حذف پین)$",
 "^[!/#](gpinfo)$",
+"^(اطلاعات گروه)$",
 "^[!/#](test)$",
 "^[!/#](add)$",
+"^(اضافه)$",
 "^[!/#](rem)$",
+"^(حذف ربات)$",
 "^[!/#](setowner)$",
 "^[!/#](setowner) (.*)$",
 "^[!/#](remowner)$",
@@ -3418,13 +3424,20 @@ patterns ={
 "^[!/#](modlist)$",
 "^[!/#](ownerlist)$",
 "^[!/#](lock) (.*)$",
+"^(قفل) (.*)$",
 "^[!/#](unlock) (.*)$",
+"^(قفل) (.*)$",								
 "^[!/#](settings)$",
+"^(تنظیمات)$",								
 "^[!/#](mutelist)$",
 "^[!/#](mute) (.*)$",
+"^(ممنوعیت) (.*)$",								
 "^[!/#](unmute) (.*)$",
+"^(رفع ممنوعیت) (.*)$",								
 "^[!/#](link)$",
+"^(لینک)$",								
 "^[!/#](setlink)$",
+"^(تنظیم لینک)$",								
 "^[!/#](rules)$",
 "^[!/#](setrules) (.*)$",
 "^[!/#](about)$",
