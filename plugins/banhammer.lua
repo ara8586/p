@@ -546,7 +546,7 @@ tdcli.deleteMessagesFromUser(msg.chat_id_, matches[2], dl_cb, nil)
     }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="delall"})
          end
       end
- if matches[1] == "globalban" or matches[1] == "گلوبال بن" and is_admin(msg) then
+ if matches[1] == "gban" or matches[1] == "جی بن" and is_admin(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
@@ -585,7 +585,7 @@ kick_user(matches[2], msg.chat_id_)
     }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="banall"})
       end
    end
- if matches[1] == "globalunban" or matches[1] == "گلوبال انبن" and is_admin(msg) then
+ if matches[1] == "ungban" or matches[1] == "رفع جی بن" and is_admin(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
@@ -655,7 +655,7 @@ kick_user(matches[2], msg.chat_id_)
     }, action_by_username, {chat_id=msg.chat_id_,username=matches[2],cmd="ban"})
       end
    end
- if matches[1] == "unban" or matches[1] == "انبن" and is_mod(msg) then
+ if matches[1] == "unban" or matches[1] == "رفع بن" and is_mod(msg) then
 if not matches[2] and tonumber(msg.reply_to_message_id_) ~= 0 then
     tdcli_function ({
       ID = "GetMessage",
@@ -794,7 +794,7 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
 			    end
         end
 		if matches[1]:lower() == 'clean' or matches[1]:lower() == 'حذف' and is_sudo(msg) then
-			if matches[2] == 'gbans' or matches[2] == 'گلوبال بن' then
+			if matches[2] == 'gbans' or matches[2] == 'جی بن ها' then
 				if next(data['gban_users']) == nil then
     if not lang then
 					return "⚠️_No_ *globally banned* _users available_⚠️"
@@ -813,22 +813,26 @@ data[tostring(chat)]['is_silent_users'][tostring(matches[2])] = nil
           end
 			end
      end
-if matches[1] == "gbanlist" or matches[1] == "لیست گلوبال بن" and is_admin(msg) then
+if matches[1] == "gbanlist" or matches[1] == "لیست جی بن" and is_admin(msg) then
   return gbanned_list(msg)
  end
 if matches[1] == "silentlist" or matches[1] == "لیست سایلنت" and is_mod(msg) then
   return silent_users_list(chat)
  end
-if matches[1] == "banlist" or matches[1] == "لیست سایلنت" and is_mod(msg) then
+if matches[1] == "banlist" or matches[1] == "لیست بن" and is_mod(msg) then
   return banned_list(chat)
  end
 end
 return {
 	patterns = {
-		"^[!/#](banall)$",
-		"^[!/#](banall) (.*)$",
-		"^[!/#](unbanall)$",
+		"^[!/#](gban)$",
+		"^(جی بن)$",
+		"^[!/#](gban) (.*)$",
+		"^(جی بن) (.*)$",
+		"^[!/#](ungban)$",
+		"^(رفع جی بن)$",
 		"^[!/#](unbanall) (.*)$",
+		"^(رفع جی بن) (.*)$",
 		"^[!/#](gbanlist)$",
 		"^(لیست جی بن)$",
 		"^[!/#](ban)$",
