@@ -2702,7 +2702,7 @@ tdcli_function ({
 			return "_تعداد فلود به *["..matches[2].."]*تنظیم شد_"
 			end
        end
-		if matches[1]:lower() == 'clean' or matches[1]:lower() == 'پاک کردن' and is_owner(msg) then
+		if matches[1]:lower() == 'clean' or matches[1]:lower() == 'حذف' and is_owner(msg) then
 			if matches[2] == 'mods' or matches[2] == 'ناظران' then
 				if next(data[tostring(chat)]['mods']) == nil then
             if not lang then
@@ -2792,7 +2792,7 @@ tdcli_function ({
              end
 		   	end
         end
-		if matches[1]:lower() == 'clean' or matches[1]:lower() == 'پاک کردن' and is_admin(msg) then
+		if matches[1]:lower() == 'clean' or matches[1]:lower() == 'حذف' and is_admin(msg) then
 			if matches[2] == 'owners' or matches[2] == 'مدیران' then
 				if next(data[tostring(chat)]['owners']) == nil then
              if not lang then
@@ -3402,6 +3402,7 @@ patterns ={
 "^[!/#](id)$",
 "^(ایدی)$",								
 "^[!/#](id) (.*)$",
+"^(ایدی) (.*)$",
 "^[!/#](pin)$",
 "^(پین)$",								
 "^[!/#](unpin)$",
@@ -3414,22 +3415,33 @@ patterns ={
 "^[!/#](rem)$",
 "^(حذف ربات)$",
 "^[!/#](setowner)$",
+"^(تنظیم مدیر)$",
 "^[!/#](setowner) (.*)$",
+"^(تنظیم مدیر) (.*)$",
 "^[!/#](remowner)$",
+"^(حذف مدیر)$",
 "^[!/#](remowner) (.*)$",
+"^(حذف مدیر) (.*)$",
 "^[!/#](promote)$",
+"^(تنظیم ناظر)$",
 "^[!/#](promote) (.*)$",
+"^(تنظیم ناظر) (.*)$",
 "^[!/#](demote)$",
+"^(حذف ناظر) (.*)$",
 "^[!/#](demote) (.*)$",
+"^(حذف ناظر) (.*)$",
 "^[!/#](modlist)$",
+"^(لیست ناظران)$",
 "^[!/#](ownerlist)$",
+"^(لیست مدیران)$",
 "^[!/#](lock) (.*)$",
 "^(قفل) (.*)$",
 "^[!/#](unlock) (.*)$",
-"^(قفل) (.*)$",								
+"^(بازکردن) (.*)$",								
 "^[!/#](settings)$",
 "^(تنظیمات)$",								
 "^[!/#](mutelist)$",
+"^(لیست ممنوعیت)$",
 "^[!/#](mute) (.*)$",
 "^(ممنوعیت) (.*)$",								
 "^[!/#](unmute) (.*)$",
@@ -3439,23 +3451,38 @@ patterns ={
 "^[!/#](setlink)$",
 "^(تنظیم لینک)$",								
 "^[!/#](rules)$",
+"^(قوانین)$",
 "^[!/#](setrules) (.*)$",
+"^(تنظیم قوانین) (.*)$",
 "^[!/#](about)$",
+"^(درباره)$",
 "^[!/#](setabout) (.*)$",
+"^(تنظیم درباره) (.*)$",
 "^[!/#](setname) (.*)$",
+"^(تنظیم نام) (.*)$",
 "^[!/#](clean) (.*)$",
+"^(حذف) (.*)$",
 "^[!/#](setflood) (%d+)$",
+"^(تنظیم فلود) (%d+)$",
 "^[!/#](res) (.*)$",
+"^(رس) (.*)$",
 "^[!/#](whois) (%d+)$",
+"^(چه کسی) (%d+)$",
 "^[!/#](help)$",
 "^[!/#](setlang) (.*)$",
+"^(تنظیم زبان) (.*)$",
 "^[#!/](filter) (.*)$",
+"^(فیلتر) (.*)$",
 "^[#!/](unfilter) (.*)$",
+"^(رفع فیلتر) (.*)$",
 "^[#!/](filterlist)$",
+"^(لیست فیلتر)$",
 "^([https?://w]*.?t.me/joinchat/%S+)$",
 "^([https?://w]*.?telegram.me/joinchat/%S+)$",
 "^[!/#](setwelcome) (.*)",
+"^(تنظیم ولکام) (.*)$",
 "^[!/#](welcome) (.*)$"
+"^(ولکام) (.*)$",
 
 },
 run=run,
